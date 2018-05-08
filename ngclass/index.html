@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="NgClassModule">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <style>
+
+        .box{
+            width: 200px;
+            height: 100px;
+            color: #fff;
+        }
+        .red{
+            background: red;
+        }
+        .blue{
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">ng-Class</h3>
+                </div>
+                <div class="panel-body" ng-controller="ngClassCtr">
+                    <div ng-class="{red:isRed, blue:isBlue}" class="box">
+                        {{text}}
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-danger" ng-click="changeRed()">红</button>
+                        <button type="button" class="btn btn-success" ng-click="changeBlue()">绿</button>
+                        <button type="button" class="btn btn-success" ng-click="cleanColor()">清除</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="ngClass.js"></script>
+
+</html>

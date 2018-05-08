@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="NgShowModule">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <style>
+
+        .box{
+            width: 200px;
+            height: 100px;
+            color: #fff;
+        }
+        .red{
+            background: red;
+        }
+        .blue{
+            background: blue;
+        }
+    </style>
+</head>
+
+<body ng-controller="ngShowCtr">
+    <button type="button" class="btn btn-success" ng-click="changeShow()">button</button>
+    
+    <div class="panel panel-default" ng-show="show">
+        <div class="panel-body">
+           <ul>
+               <li>this is one</li>
+               <li>this is two</li>
+               <li>this is three</li>
+           </ul>
+        </div>
+    </div>
+    
+
+
+</body>
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="ngShow.js"></script>
+
+</html>
